@@ -354,7 +354,7 @@ input:focus, textarea:focus, select:focus{
 /*--------- Login ---------*/
 .login {
     height: 100%;
-    width: 200px;
+    width: 50%;
     background: #fff;
     padding: 0 50px 40px 50px;
     border-radius: 10px;

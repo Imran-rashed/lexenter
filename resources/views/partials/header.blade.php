@@ -16,10 +16,10 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="profile-edit.php">My Profile</a>
                                 <a class="dropdown-item" href="change-password.php">Chnage Password</a>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
                             </div>
                         </div>
-                        <img class="profile-pic" src="img/profile.jpg" alt="profile pic">
+                        <img class="profile-pic" src="{{asset('assets/img/profile.jpg')}}" alt="profile pic">
                     </div>
                 </div>
             </div>
