@@ -19,14 +19,25 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    <link rel='stylesheet' href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/select2.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/tagsinput.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('.assets/css/select2.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('.assets/css/tagsinput.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     
 </head>
 <body>
+
+<div class="page-wrapper chiller-theme toggled">
+<a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="material-icons">view_week</i>
+        </a>
+                
+        @yield("content")
+      <!-- page-content" -->
+</div>
+
+  <!-- page-wrapper -->
 
 </body>
 </html>
