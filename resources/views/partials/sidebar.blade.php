@@ -1,7 +1,7 @@
 <nav id="sidebar" class="sidebar-wrapper">
     <div class="sidebar-content">
         <div class="sidebar-brand">
-            <a href="dashboard.php">Lexenter</a>
+            <a href="{{ url('dashboard') }}">Lexenter</a>
             <div id="close-sidebar">
                 <i class="material-icons">close</i>
             </div>
