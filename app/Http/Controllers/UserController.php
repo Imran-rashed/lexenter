@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+
+use App\User;
 
 class UserController extends Controller
 {
@@ -11,9 +15,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('modules.user.index');
+        $users = User::all();
+        return view('modules.user.index',['users' => $users]);
 
     }
 
@@ -35,7 +40,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'role_id' => 'required',
+            'email' => 'required'
+            ]);
+        $randpass= Str::random(40);;
+
+        $user = new USER();
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = bcrypt($randpass);
+        $user->role_id= $request->role_id;
+        $user->save();
+        return redirect()->route('user.index');
     }
 
     /**
