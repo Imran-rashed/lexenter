@@ -14,8 +14,8 @@
                                 John Doe
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="profile-edit.php">My Profile</a>
-                                <a class="dropdown-item" href="change-password.php">Chnage Password</a>
+                                <a class="dropdown-item" href="{{route('user.profile')}}">My Profile</a>
+                                <!-- <a class="dropdown-item" href="{{ route('password.reset')  }}">Change Password</a> -->
                                 <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}</a>

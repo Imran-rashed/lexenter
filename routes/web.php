@@ -56,7 +56,9 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('advancedsearch', 'AdvnacedSearchController@index')->name('advancedsearch.index');
         //Term
     Route::get('users', 'UserController@index')->name('user.index');
-    Route::get('term/create', 'UserController@create')->name('user.create');
+    Route::get('user/create', 'UserController@create')->name('user.create');
+    Route::get('user/profile', 'UserController@profile')->name('user.profile');
+
 
 });
 
