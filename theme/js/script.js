@@ -92,7 +92,7 @@ tinymce.init({
 });
 
 tinymce.init({
-    selector: 'textarea#chi-context-area',
+    selector: 'textarea.chi-context-area',
     height: 280,
     menubar: false,
     placeholder: "Context",
