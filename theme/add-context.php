@@ -1,6 +1,6 @@
 <?php include 'inc/header.php';?>
 
-        <main class="page-content">
+        <main class="page-content" id="addContext">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
@@ -56,17 +56,21 @@
                                     </select>
                                 </div>
                                 <input type="text" placeholder="Note" class="note">
+                                <div class="previous"
+                                     v-for="(applicant, counter) in applicants"
+                                     v-bind:key="counter">
 
-                                <textarea id="chi-context-area"> 
+                                <textarea class="chi-context-area" v-model="applicant.details" v-bind="details">
                                 </textarea>
-                                <select multiple data-role="tagsinput" class="term-input">
+                                <select multiple data-role="tagsinput" class="term-input"  v-model="applicant.tags">
                                     <option value="jQuery">jQuery</option>
                                     <option value="Angular">Angular</option>
                                     <option value="React">React</option>
                                     <option value="Vue">Vue</option>
                                 </select>
+                                </div>
                                 
-                                <a href="#"><span class="material-icons"> add_box</span> Add Block</a>
+                                <a href="#" @click="addVisa"><span class="material-icons"> add_box</span> Add Block</a>
                             </div>
                             <hr>
                             <div style="width:100%; text-align: center;">
@@ -77,6 +81,7 @@
                 </div>
             </div>
         </main>
+
       <!-- page-content" -->
       
 <?php include 'inc/footer.php';?>
